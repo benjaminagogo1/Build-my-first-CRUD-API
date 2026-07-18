@@ -179,3 +179,8 @@ def get_tasks():
                        ▼
                  Browser
  Displays the result
+
+
+
+
+ A CRUD API is a server that waits for HTTP requests. Depending on the request, it creates, reads, updates, or deletes tasks and sends back an HTTP response."

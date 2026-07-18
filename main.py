@@ -11,7 +11,7 @@ tasks = {
 [
     {
         "id": 2,
-        "title": "studying",
+        "title": "studying Go",
         "done": true
     },
 
@@ -21,3 +21,5 @@ tasks = {
         "done": false
     }
 ]
+
+@app.get("/tasks")
