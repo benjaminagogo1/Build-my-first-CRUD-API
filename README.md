@@ -272,3 +272,142 @@ FastAPI → decides which Python function should handle them.
 
 
 Your function doesn't send anything to the browser directly. It simply returns a Python object to FastAPI.
+
+## FastAPI creates the response.
+## Uvicorn delivers the response.
+
+
+Your function creates the data.
+FastAPI prepares it as an HTTP response (JSON, status code, headers).
+Uvicorn delivers it to the browser.
+
+That's the final step.
+
+The complete flow is now:
+
+Browser
+   │
+   ▼
+Uvicorn receives the request
+   │
+   ▼
+FastAPI finds the correct function
+   │
+   ▼
+Python executes your function
+   │
+   ▼
+Function returns a Python object
+   │
+   ▼
+FastAPI converts it to JSON and prepares the HTTP response
+   │
+   ▼
+Uvicorn sends the response
+   │
+   ▼
+Browser receives it
+
+
+1. Where does FastAPI come from?
+
+It comes from a Python package called fastapi.
+
+You install it with:
+
+pip install fastapi
+
+
+
+
+## FastAPI
+
+
+
+###  A class in Python is a blueprint (or template) used to create objects. It defines what data the objects will have and what actions they can perform.
+
+
+1. FastAPI (the framework)
+
+When someone says:
+
+"I'm learning FastAPI."
+
+They mean the entire framework.
+
+The framework includes many things:
+
+the FastAPI class
+routing
+request handling
+response handling
+validation
+documentation
+and much more
+
+Think of it as a toolbox.
+
+2. FastAPI (the class)
+
+Inside that framework, there is a class also named FastAPI.
+
+That's the one you import:
+
+from fastapi import FastAPI
+
+and instantiate:
+
+app = FastAPI()
+An analogy
+
+Think about Go.
+
+When you say:
+
+"I'm using the net/http package."
+
+You're referring to the whole package.
+
+But inside that package are many things:
+
+HandleFunc
+ListenAndServe
+Request
+ResponseWriter
+etc.
+
+Similarly:
+
+FastAPI (framework) = the whole package/framework.
+FastAPI (class) = one important class inside that framework.
+
+The creators simply chose to give the class the same name as the framework.
+
+It's a design choice, and many libraries do this.
+
+So don't let the identical names confuse you—they refer to different levels:
+
+the framework is the whole library,
+the class is one component inside it
+
+
+# Why is there @ before app.get()?
+
+The short answer is:
+
+Because @ tells Python that a decorator is being used.
+
+@app.get("/")
+def greet():
+    return {"message": "Hello"}
+
+"Decorate the function below with app.get("/")."
+
+"FastAPI, register the function below as the handler for GET /."
+
+
+
+app is an ordinary Python variable that stores the FastAPI application object.
+
+
+The app object is where FastAPI keeps information about your application, such as its routes.
