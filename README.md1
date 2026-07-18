@@ -47,3 +47,21 @@ Your FastAPI function returns ordinary Python objects. FastAPI converts them int
 Every HTTP response contains a status code and, usually, a response body.
 
 If a FastAPI route finishes successfully, FastAPI automatically returns 200 OK unless you tell it to use a different status code.
+
+
+
+GET /tasks        → 200 OK
+POST /tasks       → 201 Created
+DELETE /tasks/1   → 204 No Content
+
+An API client is simply a program whose job is to send HTTP requests.
+
+An API client is a tool that allows you to send any type of HTTP request, not just GET.
+
+
+A request body is the data that the client sends to the server, most commonly with POST (and often with PUT).
+
+Before calling your function, FastAPI can prepare the arguments your function needs and pass them in automatically.
+
+
+FastAPI does not rely on the parameter's name. It relies on information you provide about the parameter.
