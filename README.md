@@ -1,1 +1,99 @@
-# Build-first-CRUD-API
+Phase 0 — Understand the destination
+
+Before writing a single line of code, we answer one question:
+
+What exactly are we building?
+
+At the end of this phase, you should be able to explain to someone:
+
+"A CRUD API is a server that waits for HTTP requests. Depending on the request, it creates, reads, updates, or deletes tasks and sends back an HTTP response."
+
+No coding yet.
+
+Phase 1 — List every concept we need
+
+Instead of jumping into Stage 0 of the assignment, we'll extract the concepts hidden inside it.
+
+Something like this:
+
+What is the Internet?
+What is the Web?
+What is HTTP?
+Client vs Server
+Request vs Response
+URL
+Endpoint
+Route
+HTTP Methods (GET, POST, PUT, DELETE)
+Status Codes
+JSON
+REST
+CRUD
+FastAPI
+Swagger
+Path Parameters
+Request Body
+Validation
+Git workflow
+
+Notice something?
+
+Most of these are ideas, not programming.
+
+Phase 2 — Learn only what Stage 0 needs
+
+The assignment starts with:
+
+Hello, Server
+
+But before that, we should know:
+
+What is a server?
+Why does it keep running?
+Why localhost?
+Why port 8000?
+What happens when you open a browser?
+
+Only then will we build the first FastAPI program.
+
+Phase 3 — Build incrementally
+
+Exactly as FlyRank suggests.
+
+Instead of writing a whole CRUD API, we'll celebrate tiny milestones.
+
+For example:
+
+Day 1
+
+Browser
+     ↓
+localhost:8000
+     ↓
+FastAPI
+     ↓
+"Hello World"
+
+That's success.
+
+Day 2
+
+GET /
+
+returns
+
+{
+  "name": "Task API"
+}
+
+Another success.
+
+Day 3
+
+GET /health
+
+returns
+
+{
+  "status": "ok"
+}
