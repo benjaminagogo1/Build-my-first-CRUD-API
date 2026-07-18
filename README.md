@@ -100,8 +100,8 @@ returns
 
 
 
-HTTP is the set of rules that tells a client and a server how to communicate.
-HTTP is a communication protocol.
+## HTTP is the set of rules that tells a client and a server how to communicate.
+## HTTP is a communication protocol.
 
 What is a protocol?
 
@@ -184,3 +184,25 @@ def get_tasks():
 
 
  A CRUD API is a server that waits for HTTP requests. Depending on the request, it creates, reads, updates, or deletes tasks and sends back an HTTP response."
+
+
+
+ ## First, who is the server?
+
+This is where many beginners get confused because we use the word server in different ways.
+
+Sometimes "server" means:
+
+a computer
+
+Sometimes it means:
+
+a program
+
+Sometimes it means:
+
+the backend application
+
+For this internship, think of the server as:
+
+A program whose job is to wait for requests and send responses.
