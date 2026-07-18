@@ -116,3 +116,66 @@ What is JSON?
 
 Think of JSON as a standard way of writing data so that different programming languages can understand each other.
 JSON = JSON (JavaScript Object Notation).
+
+
+HTTP tells us how to communicate.
+GET tells us what action we want.
+/tasks tells us which resource we're talking about.
+JSON is the format used to exchange the data.
+
+
+
+How does Uvicorn know about my FastAPI application?
+
+The answer lies in this command:
+
+uvicorn main:app --reload
+
+
+
+
+
+
+
+
+
+                You press Enter
+                       │
+                       ▼
+                 Browser (Client)
+                       │
+        Creates an HTTP Request
+                       │
+                       ▼
+                  Uvicorn (Server)
+        "Someone is making a request."
+                       │
+                       ▼
+                  FastAPI
+        "Which function handles GET /tasks?"
+                       │
+                       ▼
+              Python Interpreter
+        "Run get_tasks()."
+                       │
+                       ▼
+              Your Python Function
+
+def get_tasks():
+    return tasks
+                       │
+                       ▼
+              Python returns a list
+                       │
+                       ▼
+                  FastAPI
+ Converts the Python list/dictionaries into JSON
+ Creates the HTTP response
+                       │
+                       ▼
+                  Uvicorn
+ Sends the HTTP response over the network
+                       │
+                       ▼
+                 Browser
+ Displays the result
