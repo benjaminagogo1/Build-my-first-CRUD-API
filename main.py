@@ -23,3 +23,15 @@ tasks = {
 ]
 
 @app.get("/tasks")
+def get_tasks():
+
+uvicorn main:app --reload
+
+
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def home():
+    return {"message": "Hello"}

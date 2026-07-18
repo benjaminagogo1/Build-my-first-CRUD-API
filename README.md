@@ -206,3 +206,23 @@ the backend application
 For this internship, think of the server as:
 
 A program whose job is to wait for requests and send responses.
+
+
+Registering a function is not the same as executing a function.
+
+What triggers the function to execute?
+
+If registering doesn't execute it, then what does?
+
+Answer:
+
+An incoming HTTP request.
+
+For example, when a browser sends:
+
+GET /tasks
+
+The request is what triggers the function to run.
+
+
+FastAPI decides which function to call based on the incoming request.
