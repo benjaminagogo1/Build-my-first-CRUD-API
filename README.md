@@ -97,3 +97,22 @@ returns
 {
   "status": "ok"
 }
+
+
+
+HTTP is the set of rules that tells a client and a server how to communicate.
+HTTP is a communication protocol.
+
+What is a protocol?
+
+A protocol is simply:
+
+An agreed set of rules for communication.
+
+The method tells the server what action the client wants to perform.
+
+
+What is JSON?
+
+Think of JSON as a standard way of writing data so that different programming languages can understand each other.
+JSON = JSON (JavaScript Object Notation).
