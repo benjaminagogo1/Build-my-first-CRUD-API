@@ -226,3 +226,49 @@ The request is what triggers the function to run.
 
 
 FastAPI decides which function to call based on the incoming request.
+
+
+
+
+# This line is called a decorator.
+@app.get("/tasks")
+Register the function below as the handler for GET /tasks.
+# example
+@app.get("/tasks")
+def get_tasks():
+    return tasks
+
+
+
+
+So when Python reaches this code while starting your application, FastAPI stores something like:
+
+GET /tasks
+      ↓
+get_tasks
+
+It doesn't execute get_tasks().
+
+It simply remembers:
+
+"If I ever receive GET /tasks, I'll call get_tasks()."
+
+Route registration happens once at application startup, not every time a request arrives.
+
+
+# Distinct
+FastAPI does not sit on the Internet waiting for requests.
+
+Uvicorn waits for requests.
+
+FastAPI waits for Uvicorn to hand it one.
+
+That's the only idea for this lesson.
+
+This also explains why we need both Uvicorn and FastAPI:
+
+Uvicorn → receives HTTP requests.
+FastAPI → decides which Python function should handle them.
+
+
+Your function doesn't send anything to the browser directly. It simply returns a Python object to FastAPI.
