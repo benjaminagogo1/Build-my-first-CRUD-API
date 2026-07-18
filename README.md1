@@ -1,3 +1,49 @@
 python3 -m venv .venv
 source .venv/bin/activate
 pip install fastapi uvicorn
+
+
+
+
+
+
+Browser
+    │
+    ▼
+GET /
+    │
+    ▼
+Uvicorn receives the request
+    │
+    ▼
+FastAPI looks in the app's route registry
+    │
+    ▼
+Finds:
+GET /  →  home()
+    │
+    ▼
+Python executes home()
+    │
+    ▼
+home() returns:
+{"Message": "Hello"}
+    │
+    ▼
+FastAPI converts it to JSON
+    │
+    ▼
+Uvicorn sends the HTTP response
+    │
+    ▼
+Browser displays:
+{"Message":"Hello"}
+
+Your function's responsibility ends when it returns the Python object. FastAPI takes over from there.
+
+
+Your FastAPI function returns ordinary Python objects. FastAPI converts them into JSON automatically.
+
+Every HTTP response contains a status code and, usually, a response body.
+
+If a FastAPI route finishes successfully, FastAPI automatically returns 200 OK unless you tell it to use a different status code.

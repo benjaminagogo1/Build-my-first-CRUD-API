@@ -4,12 +4,18 @@ app = FastAPI()
 
 @app.get("/")
 def home():
-    return {"Meassage": "Hello"}
+    return {
+        "id": 1,
+        "title": "Learn FastAPI",
+        "completed": False
+    }
 
 
 
 
-
+@app.get("/favicon")
+def fav():
+    return True
 
 
 
