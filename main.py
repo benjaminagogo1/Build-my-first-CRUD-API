@@ -13,12 +13,6 @@ def home():
 
 
 
-@app.get("/favicon")
-def fav():
-    return True
-
-
-
 
 
 
